@@ -11,15 +11,13 @@ df["bomb_planted"] = df["bomb_planted"].astype(int)
 df = pd.get_dummies(df, columns=["map"], dtype=int)
 
 
-df_sample = df.sample(n=20000, random_state=42)
-
-X = df_sample.drop(columns=["round_winner"])
-y = df_sample["round_winner"]
+X = df.drop(columns=["round_winner"])
+y = df["round_winner"]
 
 
 X_train, X_test, y_train, y_test = train_test_split(
     X, y,
-    test_size=0.2,
+    test_size=0.85,
     random_state=42,
     stratify=y
 )
