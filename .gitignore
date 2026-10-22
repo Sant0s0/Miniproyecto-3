@@ -1,0 +1,31 @@
+# Entorno Virtual
+.venv/
+venv/
+env/
+ENV/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Datasets pesados (>50MB) - Descargar de Kaggle
+*.csv
+*.xlsx
+csgo_round_snapshots*
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Archivos generados / Temporales
+*.log
+informe_*.html
+*.pdf
+
+# IDE y Sistema Operativo
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
